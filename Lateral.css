@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave&family=Oswald&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+   height:150vh;
+   width:100%;
+   background: linear-gradient(to right,rgba(32, 32, 32, 1.1)95%,blueviolet);
+
+}
+
+nav.menu-side {/*A bar that i maked for a good visuability and esthetic for the client*/
+    width: 70px;
+    height: 100%;
+    background-color: #202020;
+    padding: 40px 0 40px 1%;
+    transition: .2s;
+    box-shadow: 3px 0 50px blueviolet;
+    position: fixed;
+    top:0;
+    left: 0;
+    transition: .5s;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+nav.menu-side.expanded {/*"expanded" its a toggle maked in JS, responsible for raising the bar*/
+    width: 70px;
+    width: 285px;
+}
+
+.btn-side {/*A button icon in the bar*/
+    width: 40px;
+    font-size: 37px;
+    color: blueviolet;
+    cursor:pointer;
+    margin-left:5px;
+}
+
+ul  {
+    list-style-type: none;
+    height: 100%;
+}
+
+ul li.itens-menu{/*list of the pages in the bar ("HOME,INFO,USER")*/
+    transition: .5s;
+}
+ul li.active {/*"active" a variable maked in JS, is used to color the sidebar by the page the user is on*/
+    background-color: blueviolet;
+}
+ul li.itens-menu > a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 39px; 
+    
+}
+
+ul li.itens-menu > a > .icon > i{
+    font-size: 30px;
+    padding-left:6px;
+}
+
+ul li.itens-menu > a >.txt-link {
+    margin-left:70px;
+    font-size: 15px ;
+    transition: 1s; 
+    opacity: 0;  
+}
+
+ul li.itens-menu:hover {
+    background-color: blueviolet;
+}
+
+nav.menu-side.expanded .txt-link {/*When the variable "expanded" actived the "txt-link" needs go to rigth */
+    margin-left: 40px;
+    opacity: 1;
+}
+
+@media(max-width:780px) {/*Responsivity of the sidebar*/
+    nav.menu-side {
+        max-width: 140px
+    }
+
+    nav.menu-side.expanded .txt-link {
+        margin-left: 30px;
+        opacity: 1;
+    }
+}
+
+
+

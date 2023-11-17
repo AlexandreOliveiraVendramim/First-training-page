@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@1,300&display=swap');
+body{
+    height:50vh
+}
+header {
+    width: 100%;
+    font-family: 'Mohave', sans-serif;
+}
+
+.bghome { /* TXT of contain information of the BOT*/
+    border:double 5px violet;
+    border-radius: 50px;
+    width: 60%;
+    padding: 0 60px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top:10px;
+    margin-left: 350px;
+    transition: 1.2s;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.bghome strong {
+    color:blueviolet;
+    text-shadow: 1px 2px #000000;
+    transition: 1.2s;
+}
+
+p {
+    color:#fff;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.txt-info { /* Contain the initial text of the page*/
+    color:#fff;
+    font-family:'Mohave:ital';
+    margin-left:50px;
+    opacity: 1;
+    transition:.4s;
+}
+.txt-info h1{
+    transition: 1.5s;
+}
+.txt-info h3 strong {
+    transition: 1.5s;
+}
+
+.txt-ini strong{
+    color:blueviolet;
+    text-shadow:1px 2px #000000;
+}
+
+.txt-ini {/* DIV what contain the txt info*/
+    width: 100%;
+    height: 50%;
+    transition: .5s;
+    display: flex;
+    justify-content:space-between;
+    line-height: 44px;
+    padding: 0 40px;
+
+}
+
+
+.txt-info.expanded {/* "expanded" its a toggle maked in JS ,take care espace of TXT initial*/
+    padding-left: 215px;
+    opacity: 1;
+}
+
+
+.icons-net > a{/*ICONS from the page*/
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+    transition: 3s;
+}
+.btn-pass{/* Button for the client click and show the TXT*/
+    border: 2px solid black;
+    padding: 4px 25px;
+    cursor: pointer;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 15px;
+    border-radius: 15px;
+    transition: 1.5s;
+    height: 50px;
+    color:#fff;
+    margin-right: 500px;
+    margin-top: 25px;
+}
+
+
+h2 {
+    color: #fff;
+    font-size: 35px;
+}
+
+.liked {/*TXT that show whats have vantage of the BOT*/
+    width: 25%;
+    margin-left: 30px;
+    margin-top: 130px;
+    opacity:0;
+    visibility: hidden;
+    transition: 1.5s;
+    overflow:hidden
+}
+
+.liked strong {
+    color:blueviolet;
+    text-shadow: 1px 2px #000000;
+    transition: 1.2s;
+}
+
+     @keyframes translateY {/*Animation for the icons*/
+        from {
+            transform: translateY(0) scale(1);
+        }
+
+        to {
+            transform: translateY(-5px) scale(1);
+        }
+     }
+
+     /*And this part content hovers and some variables maked in JS*/
+
+     .icons-net a > i:hover{
+            animation: translateY 0.8s forwards;
+            color:blueviolet;
+     }
+
+     .txt-info h1:hover {
+        color:blueviolet;
+        text-shadow:1px 2px #000000;
+        font-size: 35px;
+     }
+
+     .txt-ini h3 strong:hover{
+        font-size: 22px;
+     }
+
+     .liked.bigger{ /*"bigger" its annother variable maked in JS for show the TXT information*/
+        margin-left:350px;
+        visibility:visible;
+        opacity: 1;
+     }
+     .bghome.bigger {
+        margin-top:50px;
+        opacity: 1;
+        visibility: visible;
+     }
+     .bghome strong:hover{
+        font-size: 21px;
+     }
+
+     .btn-pass:hover{
+        background-color: blueviolet;
+     }
+
+     .img-bot:hover{
+        animation: colors 2s;
+        animation-iteration-count: infinite;
+        animation-direction:alternate-reverse;
+     }
+
+     .liked strong:hover{
+        font-size: 37px;
+     }
+
+     @media(max-width:1200px){/*Responsivity of the page*/
+
+            body {
+                width: 50vw;
+                height: 50vh;
+            }
+
+            .txt-ini {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                gap:30px
+            }
+        
+            .txt-info h1 {/* Responsivity of the txt initial*/
+                font-size: 25px;
+                width: 250px;
+                margin-bottom: 33px;
+            }
+            .txt-info h1:hover{/* Responsivity of the colors h1 initial*/
+                color:blueviolet;
+                font-size: 25px;
+            }
+
+            .bghome {/* Responsivity of the text, what showing your vantage when you used the bot */
+                width: 100%;
+                height: 50%;
+                margin-left:200px;
+            }
+            
+            .btn-pass { /* Responsivity of button "First Step"*/
+                margin-right: 50px;
+                font-size: 20px;
+                height: 100px;
+                width: 100%;
+            }
+
+
+            .icons-net a{ /*The icons need be in a collum for a better visuability*/
+                display: inline-block;
+                flex-direction: column;
+            }
+            .liked { /*I just setting small width */
+                width: 350px;
+            }
+
+            .liked.bigger {
+                margin-left:150px;
+                visibility:visible;
+                opacity: 1;
+             }
+
+             .txt-info.expanded {
+                padding-left:60px;
+                opacity: 1;
+            }
+
+
+        }
+
+  
